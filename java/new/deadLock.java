@@ -1,0 +1,72 @@
+package org.ace;
+import java.util.concurrent.locks.*;
+class Text1
+{  static Object obj= new Object();
+   static Object obj1= new Object();
+ private static final ReentrantLock lock = new ReentrantLock();
+ private static final ReentrantLock lock1 = new ReentrantLock();
+   public static void main(String args[]){
+	      
+		new Thread(new a(obj,obj1,lock,lock1)).start();
+		new Thread(new b(obj,obj1,lock,lock1)).start();
+   }
+}
+
+class a implements Runnable{
+ Object obj=null;
+ Object obj1=null;
+  ReentrantLock lock=null;
+  ReentrantLock lock1=null;
+ public a(Object obj,Object obj1, ReentrantLock lock, ReentrantLock lock1){
+  this.obj=obj;
+  this.obj1=obj1;
+   this.lock=lock;
+   this.lock1=lock1;
+   }
+   public void run(){
+      lock.lock();  
+	      try{ 
+			
+			System.out.println("a1");	
+	     Thread.sleep(500);
+		  }catch(Exception e){
+			  e.printStackTrace();
+		  }
+            lock1.lock();
+		 System.out.println(2);
+		      lock1.unlock();
+		 
+	  lock.unlock();
+     
+   }
+	
+}
+
+class b implements Runnable{
+  Object obj=null;
+  Object obj1=null;
+  ReentrantLock lock=null;
+  ReentrantLock lock1=null;
+ public b(Object obj,Object obj1, ReentrantLock lock, ReentrantLock lock1 ){
+  this.obj=obj;
+  this.obj1=obj1;
+   this.lock=lock;
+   this.lock1=lock1;
+   }
+   public void run(){
+      lock1.lock();  
+	      try{ 
+			System.out.println("b1");	
+	     Thread.sleep(500);
+		  }catch(Exception e){
+		  }
+            lock.lock();
+		 System.out.println(2);
+		     
+		   lock.unlock();
+		 
+	      lock1.unlock();
+     
+   }
+	
+}

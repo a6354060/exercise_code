@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html lang="zh">
+ <head>
+  <meta charset="UTF-8">
+  
+  外部式CSS<link href="1.css" type="text/css" rel="stylesheet"/>
+  <title>HTLM标签</title>
+  <style type="text/css">a:hover{color:pink; }</style>
+ </head>
+ <body>
+   <br/>嵌入式 <style type="text/css">form{color:blue;font-size:25px;border:2px solid yellow} </style>
+    <label for="div" style="font-size:25px;font-weight:bold;color:green;">label标签改进用户可用性for属性值必须与控件ID属性值相同从而进行跳转到相关页面</label>
+    <h1 align="center">标题1</h1>
+    <b><p align="center" size="14">这是段落标签</p></b>
+	<p>&lt &gt &nbsp&nbsp&nbsp这是第二段落标签</p>换行标签<br/>
+    水平线标记<hr size="0" noshade="noshade" color="red" width="50%"/> 
+	列表
+	<ol>
+	<li >列one</li>
+	<li>列two</li>
+	<li>列three</li>
+	<li>列four</li>
+	</ol>
+	自定义列表
+	 <dl>
+	  <dt>城市</dt>
+	     <dd >衡阳</dd>
+	     <dd>株洲</dd>
+	     <dd>长沙</dd>
+	 </dl>
+	 加入图片
+    <img src="d:\\12.PNG" width="30%" title="图片" alt="无法显示"></img>
+   
+   <div align="center"><br/>表格制作
+    <table id="div" border="1" width="400" align="center">
+	   <tr align="center" border="1">
+	      <td  rowspan="3" bgcolor="green" border="1">课程表</td>
+	      <td colspan="2"  bgcolor="yellow" border="1">星期1</td>		  
+	   </tr>
+	   <tr align="center" border="1">
+	      <td border="1">上午</td>
+	      <td border="1">下午</td>
+			   
+	   </tr>
+	   <tr align="center" border="1">
+	     <td border="1">语文</td>
+	     <td border="1">数学</td>
+		 
+	   </tr>
+
+	</table> 
+    </div> 
+   <h2 align="center" ><br/>表单操作</h2>
+<div border="1" id="div">
+     <form  align="center" name="表单唯一标志名字" method="get" action="http:\\www.baidu.com" target="_balank">
+	      <label>用户名:</label>
+		  <input type="text" name="username" value="" />
+          <br/>单选框  <label>性别 </label>
+		  <input  type="radio" name="sex" value="1" /> 男 <input type="radio" name="sex" value="2"  /> 女
+	      <br/><label>密码:</label>
+	      <input type="password" name="password" id="userpass" value="" />
+          <br/>复选框  <label>爱好:</label>
+		    <input type="checkbox" value="1">看电视</input>
+            <input type="checkbox" value="2">运动</input>
+		    <input type="checkbox" value="3">读书</input>
+           <br/><label>所在地:</label>
+		         <select mmultiple="multiple" name="addr" value="1.1.1.1" ">
+				   <option value="1">湖南</option>
+				   <option value="2" selected="selected">湖北</option>
+				   <option value="3">河北</option>
+				 </select>
+           <br/><label for="个性签名:">个性签名:</label>
+		    <textarea name="123" value="321"></textarea>
+	      <br/><input type="submit" value="提交"></input> <input type="reset" value="重置"></input>	 
+	 </form>
+    </div>
+	<pre id="div"> 
+   <h2><p align="center">超链接</p></h2>
+   <a align="center" href="http:\\www.hnpolice.com" target="_balank" title="www.hnpolice.com">警院网址(这是用文本打开的)</a>
+    <p><a href="http:\\www.hnpolice.com" target="_balank" title="www.hnpolice.com"> <img src="d:\\12.PNG" width="400" title="www.hnpolice.com"></img>警院网址(这是用图片打开的)</a>
+   </p>
+
+   <p>用a标志来链接E-mail</p>
+   <a href="mailto:15111397674@163.com,1159575665@qq.com?subject=邮件主题&body=邮件内容">发送</a>
+   </pre>
+
+ </body>
+</html>
