@@ -1,5 +1,5 @@
 package org.ace;
-  // ·ÖÖÎ·¨ ¿ìËÙÅÅĞò·¨
+  // å¿«é€Ÿæ’åº
 public class QuickSort{
 
       public static int partition(int []r ,int first, int end){
