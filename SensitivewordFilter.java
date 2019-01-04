@@ -142,7 +142,7 @@ public class SensitivewordFilter {
                 break;
             }
         }
-        if(matchFlag < 2 || !flag){        //长度必须大于等于1，为词
+        if(matchFlag < 1 || !flag){        //长度必须大于等于1，为词
             matchFlag = 0;
         }
         return matchFlag;
